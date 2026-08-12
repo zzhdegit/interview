@@ -35,13 +35,13 @@
 }
 
 @media (min-width: 960px) {
-  .VPDoc.has-sidebar .container {
+  .VPDoc.has-sidebar > .container {
     display: flex;
     justify-content: center;
     max-width: min(1520px, calc(100vw - var(--vp-sidebar-width))) !important;
   }
 
-  .VPDoc.has-sidebar .content {
+  .VPDoc.has-sidebar > .container > .content {
     order: 1;
     flex: 1 1 auto;
     min-width: 0 !important;
@@ -50,11 +50,11 @@
     padding-right: 18px;
   }
 
-  .VPDoc.has-sidebar .content-container {
+  .VPDoc.has-sidebar > .container > .content > .content-container {
     max-width: min(100%, 1120px) !important;
   }
 
-  .VPDoc.has-aside .aside {
+  .VPDoc.has-aside > .container > .aside {
     display: block !important;
     order: 2;
     flex: 0 0 176px;
@@ -63,30 +63,30 @@
     z-index: 2;
   }
 
-  .VPDoc.has-aside .aside-container,
-  .VPDoc.has-aside .aside-curtain {
+  .VPDoc.has-aside > .container > .aside .aside-container,
+  .VPDoc.has-aside > .container > .aside .aside-curtain {
     width: 160px;
   }
 }
 
 @media (min-width: 1280px) {
-  .VPDoc.has-sidebar.has-aside .content {
+  .VPDoc.has-sidebar.has-aside > .container > .content {
     width: calc(100% - 248px) !important;
     padding-right: 28px;
   }
 
-  .VPDoc.has-sidebar.has-aside .content-container {
+  .VPDoc.has-sidebar.has-aside > .container > .content > .content-container {
     max-width: min(100%, 1080px) !important;
   }
 
-  .VPDoc.has-aside .aside {
+  .VPDoc.has-aside > .container > .aside {
     flex: 0 0 224px;
     max-width: 224px;
     padding-left: 24px;
   }
 
-  .VPDoc.has-aside .aside-container,
-  .VPDoc.has-aside .aside-curtain {
+  .VPDoc.has-aside > .container > .aside .aside-container,
+  .VPDoc.has-aside > .container > .aside .aside-curtain {
     width: 200px;
   }
 }
