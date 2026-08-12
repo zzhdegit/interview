@@ -1,0 +1,46 @@
+:root {
+  --vp-c-brand-1: #2563eb;
+  --vp-c-brand-2: #1d4ed8;
+  --vp-c-brand-3: #60a5fa;
+  --vp-home-hero-name-color: #1d4ed8;
+  --vp-c-bg-soft: #f7f8fb;
+  --vp-c-border: #e2e8f0;
+}
+
+.dark {
+  --vp-c-brand-1: #8ab4ff;
+  --vp-c-brand-2: #60a5fa;
+  --vp-c-brand-3: #1d4ed8;
+  --vp-c-bg-soft: #171a22;
+  --vp-c-border: #2f3542;
+}
+
+.VPHome .VPFeature {
+  border-radius: 8px;
+}
+
+.vp-doc h2 {
+  margin-top: 36px;
+  padding-top: 28px;
+}
+
+.vp-doc h3 {
+  margin-top: 28px;
+  padding: 12px 14px;
+  border-left: 4px solid var(--vp-c-brand-1);
+  border-radius: 6px;
+  background: var(--vp-c-bg-soft);
+}
+
+.vp-doc h3 + p {
+  margin-top: 14px;
+}
+
+.vp-doc table {
+  display: table;
+  width: 100%;
+}
+
+.vp-doc a {
+  text-underline-offset: 3px;
+}
