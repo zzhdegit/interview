@@ -60,13 +60,10 @@
   }
 
   .VPHome::before,
-  .VPHome::after,
-  .VPDoc::before,
-  .VPDoc::after {
+  .VPHome::after {
     content: "";
     position: fixed;
     pointer-events: none;
-    z-index: 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -79,6 +76,7 @@
     aspect-ratio: 1;
     border-radius: 50%;
     opacity: 0.72;
+    z-index: 0;
     box-shadow: var(--sticker-shadow);
   }
 
@@ -96,29 +94,40 @@
     margin-left: clamp(150px, 16vw, 230px);
   }
 
-  .VPDoc::before,
-  .VPDoc::after {
-    top: 46vh;
-    width: clamp(48px, 4.2vw, 88px);
-    aspect-ratio: 1;
-    opacity: 0.8;
-    filter: drop-shadow(var(--sticker-shadow));
-  }
-
-  .VPDoc::before {
-    left: max(calc(var(--vp-sidebar-width) + 4px), calc((100vw - 1620px) / 2 + 20px));
-    background-image: url("../image/mascot-left.gif");
-  }
-
-  .VPDoc::after {
-    right: max(12px, calc((100vw - 1620px) / 2 + 20px));
-    background-image: url("../image/mascot-right.gif");
-  }
-
   .VPHome > *,
   .VPDoc > * {
     position: relative;
     z-index: 1;
+  }
+}
+
+.page-mascots {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .page-mascots {
+    display: block;
+  }
+
+  .page-mascot {
+    position: fixed;
+    top: clamp(230px, 42vh, 420px);
+    width: clamp(72px, 5.8vw, 120px);
+    height: auto;
+    pointer-events: none;
+    opacity: 0.94;
+    z-index: 80;
+    filter: drop-shadow(var(--sticker-shadow));
+    transform: translateY(-50%);
+  }
+
+  .page-mascot-left {
+    left: max(calc(var(--vp-sidebar-width) + 18px), calc((100vw - 1620px) / 2 + 36px));
+  }
+
+  .page-mascot-right {
+    right: max(24px, calc((100vw - 1620px) / 2 + 36px));
   }
 }
 
@@ -186,4 +195,16 @@
 
 .answer-page .vp-doc h4 + ul > li:first-child::marker {
   color: var(--answer-c-warm);
+}
+
+.answer-page .vp-doc .image-placeholder {
+  margin: -6px 0 24px;
+  padding: 10px 14px;
+  border: 1px dashed var(--vp-c-border);
+  border-left: 3px solid var(--vp-c-brand-3);
+  border-radius: 0;
+  background: linear-gradient(90deg, var(--knowledge-c-soft), var(--knowledge-c-soft-end));
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  line-height: 1.7;
 }

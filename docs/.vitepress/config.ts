@@ -9,7 +9,8 @@ export default defineConfig({
   base,
   lastUpdated: true,
   markdown: {
-    lineNumbers: false
+    lineNumbers: false,
+    math: true
   },
   themeConfig: {
     outline: {
