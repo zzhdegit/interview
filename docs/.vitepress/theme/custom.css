@@ -132,23 +132,24 @@
 
   .page-mascot {
     position: fixed;
-    top: clamp(230px, 42vh, 420px);
-    width: clamp(72px, 5.8vw, 120px);
+    bottom: clamp(16px, 3vh, 28px);
+    width: clamp(64px, 5.5vw, 104px);
+    max-width: calc(50vw - 32px);
+    max-height: calc(100vh - 96px);
     height: auto;
     pointer-events: none;
     opacity: 0.94;
     z-index: 80;
     filter: drop-shadow(var(--sticker-shadow));
-    transform: translateY(-50%);
+    transform: none;
   }
 
   .page-mascot-left {
-    left: max(calc(var(--vp-sidebar-width) + 18px), calc((100vw - 1620px) / 2 + 36px));
-    transform: translate(-100%, -50%);
+    left: clamp(16px, 2vw, 28px);
   }
 
   .page-mascot-right {
-    right: -36px;
+    right: clamp(16px, 2vw, 28px);
   }
 }
 

@@ -14,7 +14,7 @@ export default defineConfig({
   },
   themeConfig: {
     outline: {
-      level: [2, 3],
+      level: [2, 4],
       label: '本页目录'
     },
     search: {
