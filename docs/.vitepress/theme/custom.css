@@ -1,4 +1,5 @@
 :root {
+  --vp-layout-max-width: 1680px;
   --vp-c-brand-1: #2563eb;
   --vp-c-brand-2: #1d4ed8;
   --vp-c-brand-3: #60a5fa;
@@ -9,6 +10,7 @@
   --answer-c-warm: #c2410c;
   --answer-c-cool-soft: #ecfdf5;
   --answer-c-warm-soft: #fff7ed;
+  --sticker-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
 }
 
 .dark {
@@ -21,6 +23,95 @@
   --answer-c-warm: #fdba74;
   --answer-c-cool-soft: rgba(20, 184, 166, 0.12);
   --answer-c-warm-soft: rgba(251, 146, 60, 0.1);
+  --sticker-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+}
+
+@media (min-width: 960px) {
+  .VPDoc.has-sidebar .container {
+    max-width: min(1500px, calc(100vw - var(--vp-sidebar-width))) !important;
+  }
+
+  .VPDoc.has-sidebar .content {
+    width: 100% !important;
+    max-width: min(1280px, 78vw) !important;
+  }
+
+  .VPDoc.has-sidebar .content-container {
+    max-width: none !important;
+  }
+
+  .VPDoc.has-aside .aside {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .VPHome,
+  .VPDoc {
+    position: relative;
+  }
+
+  .VPHome::before,
+  .VPHome::after,
+  .VPDoc::before,
+  .VPDoc::after {
+    content: "";
+    position: fixed;
+    pointer-events: none;
+    z-index: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .VPHome::before,
+  .VPHome::after {
+    top: 116px;
+    width: clamp(132px, 12vw, 190px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    opacity: 0.72;
+    box-shadow: var(--sticker-shadow);
+  }
+
+  .VPHome::before {
+    left: max(28px, calc((100vw - 1500px) / 2 + 28px));
+    background-image: url("../image/home-logo-left.jpg");
+  }
+
+  .VPHome::after {
+    right: max(28px, calc((100vw - 1500px) / 2 + 28px));
+    background-image: url("../image/home-logo-right.jpg");
+  }
+
+  .VPHome .VPHero .main {
+    margin-left: clamp(150px, 16vw, 230px);
+  }
+
+  .VPDoc::before,
+  .VPDoc::after {
+    top: 46vh;
+    width: clamp(48px, 4.2vw, 88px);
+    aspect-ratio: 1;
+    opacity: 0.8;
+    filter: drop-shadow(var(--sticker-shadow));
+  }
+
+  .VPDoc::before {
+    left: max(calc(var(--vp-sidebar-width) + 4px), calc((100vw - 1620px) / 2 + 20px));
+    background-image: url("../image/mascot-left.gif");
+  }
+
+  .VPDoc::after {
+    right: max(12px, calc((100vw - 1620px) / 2 + 20px));
+    background-image: url("../image/mascot-right.gif");
+  }
+
+  .VPHome > *,
+  .VPDoc > * {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .VPHome .VPFeature {
