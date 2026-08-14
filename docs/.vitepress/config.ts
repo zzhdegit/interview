@@ -3,8 +3,8 @@ import { defineConfig } from 'vitepress'
 const base = process.env.BASE_PATH || '/'
 
 export default defineConfig({
-  title: '集成电路面试题库',
-  description: '数集、模集、半导体面试题与答案整理',
+  title: 'AI 电子电路题库',
+  description: '数集、模集、半导体方向的电子电路课程练习整理',
   lang: 'zh-CN',
   base,
   lastUpdated: true,
@@ -45,38 +45,17 @@ export default defineConfig({
     },
     nav: [
       { text: '主页', link: '/' },
-      {
-        text: '题库',
-        items: [
-          { text: '数集', link: '/questions/数集' },
-          { text: '模集', link: '/questions/模集' },
-          { text: '半导体', link: '/questions/半导体' }
-        ]
-      },
-      {
-        text: '答案',
-        items: [
-          { text: '数集答案', link: '/answers/数集_答案' },
-          { text: '模集答案', link: '/answers/模集_答案' },
-          { text: '半导体答案', link: '/answers/半导体_答案' }
-        ]
-      }
+      { text: '数集', link: '/数集' },
+      { text: '模集', link: '/模集' },
+      { text: '半导体', link: '/半导体' }
     ],
     sidebar: [
       {
-        text: '题库',
+        text: '分类',
         items: [
-          { text: '数集', link: '/questions/数集' },
-          { text: '模集', link: '/questions/模集' },
-          { text: '半导体', link: '/questions/半导体' }
-        ]
-      },
-      {
-        text: '答案',
-        items: [
-          { text: '数集答案', link: '/answers/数集_答案' },
-          { text: '模集答案', link: '/answers/模集_答案' },
-          { text: '半导体答案', link: '/answers/半导体_答案' }
+          { text: '数集', link: '/数集' },
+          { text: '模集', link: '/模集' },
+          { text: '半导体', link: '/半导体' }
         ]
       }
     ],
@@ -92,7 +71,7 @@ export default defineConfig({
       }
     },
     footer: {
-      message: '基于 Markdown 整理，可直接在 GitHub 中编辑。',
+      message: '基于 Markdown 整理，可直接编辑和扩展。',
       copyright: 'Copyright © 2026'
     }
   }
