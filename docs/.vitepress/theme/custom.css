@@ -346,6 +346,37 @@
   margin: 0 2px;
 }
 
+.content-page .vp-doc mjx-container.MathJax,
+.content-page .vp-doc mjx-container[jax="SVG"],
+.content-page .vp-doc mjx-container[jax="CHTML"] {
+  color: var(--vp-c-text-1) !important;
+}
+
+.content-page .vp-doc mjx-container[jax="SVG"] > svg {
+  color: var(--vp-c-text-1) !important;
+}
+
+.content-page .vp-doc .formula-text {
+  display: inline-block;
+  margin: 0 2px;
+  color: var(--vp-c-text-1);
+  font-family: "Times New Roman", "Cambria Math", serif;
+  font-size: 1.04em;
+  line-height: 1.35;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.content-page .vp-doc .formula-text sub {
+  font-size: 0.72em;
+  line-height: 0;
+}
+
+.content-page .vp-doc .formula-text .overline {
+  text-decoration: overline;
+  text-decoration-thickness: 1px;
+}
+
 .content-page .vp-doc hr {
   margin: 10px 0 22px;
   border: 0;
