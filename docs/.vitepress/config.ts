@@ -7,6 +7,9 @@ export default defineConfig({
   description: '数集、模集、半导体方向的电子电路课程练习整理',
   lang: 'zh-CN',
   base,
+  head: [
+    ['link', { rel: 'icon', type: 'image/png', href: `${base}favicon.png` }]
+  ],
   lastUpdated: true,
   markdown: {
     lineNumbers: false,
